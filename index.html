@@ -1,60 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Gallery</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-</head>
-<body>
-
-
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
     <header class="navbar">
-        <div class="logo"><span>Pic</span>Horizon</div>
-        <nav>
-            <ul>
-                <li><a href="#">GALLERIES</a></li>
-                <!-- <li><a href="#">ALBUMS</a></li> -->
-                <li><a href="#">FEATURES</a></li>
-                <li><a href="#">BLOG</a></li>
-                <!-- <li><a href="#">CONTACTS</a></li> -->
-            </ul>
-        </nav>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        </div>
+      <div class="logo"><span>Pic</span>Horizon</div>
+      <nav>
+        <ul>
+          <li><a href="#">GALLERIES</a></li>
+          <li><a href="#">FEATURES</a></li>
+          <li><a href="#">BLOG</a></li>
+        </ul>
+      </nav>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+      </div>
     </header>
-    
 
+    <!-- Hero Section -->
     <header class="hero">
-        <div class="overlay">
-            <div class="logo"><span>Pic </span>Horizon</div>
-            <p>Expanding the horizons of creativity! Dive into a collection of stunning photos <br> <br>
-                 that push the boundaries of imagination.</p>
-        </div>
+      <div class="overlay">
+        <div class="logo"><span>Pic </span>Horizon</div>
+        <p>
+          Expanding the horizons of creativity! Dive into a collection of
+          stunning photos <br />
+          <br />
+          that push the boundaries of imagination.
+        </p>
+      </div>
     </header>
-    
 
+    <!-- Image Gallery -->
+  <div id="gallery">
     <h1>Image Gallery</h1>
-    <div class="gallery">
-        <img src="image1.jpg" alt="Image 1" onclick="openModal(this)">
-        <img src="image2.jpg" alt="Image 2" onclick="openModal(this)">
-        <img src="image3.jpg" alt="Image 3" onclick="openModal(this)">
-        <img src="image4.jpg" alt="Image 4" onclick="openModal(this)">
+
+    <div class="album-gallery">
+      <div class="album" onclick="openModal('packery')">
+        <img src="https://img.freepik.com/free-photo/waterfall-with-trees-around_1258-41.jpg?ga=GA1.1.94081497.1723952170&semt=ais_hybrid" alt="Packery Gallery" />
+        <p>Nature Wonders</p>
+      </div>
+      <div class="album" onclick="openModal('client')">
+        <img src="https://img.freepik.com/premium-photo/man-with-dog-against-waterfall_1048944-16090700.jpg?ga=GA1.1.94081497.1723952170&semt=ais_hybrid" alt="Client Proofing" />
+        <p>Wildlife Chronicles</p>
+      </div>
+      <div class="album" onclick="openModal('beforeAfter')">
+        <img src="https://img.freepik.com/free-photo/spices-spoons-wooden-table_176420-110.jpg?ga=GA1.1.94081497.1723952170&semt=ais_hybrid" alt="Before / After" />
+        <p>Food & Flavors</p>
+      </div>
     </div>
 
-    <!-- Modal for Enlarged Image -->
+  </div>
+    <!-- MODAL -->
+    <!-- <div id="imageModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modalContent" class="modal-content"></div>
+    </div> -->
+
     <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
+      <div id="modalContent" class="modal-content">
+    
+        <button class="close-button" onclick="closeModal()">Close Modal</button>
+      </div>
     </div>
+    
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
