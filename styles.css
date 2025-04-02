@@ -5,6 +5,105 @@ body {
     color: white;
 }
 
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 15px 50px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #7ebc4a; /* Green color for AUREL */
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav ul li {
+    display: inline;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #7ebc4a;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #7ebc4a;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('https://img.freepik.com/free-vector/gradient-mountain-landscape_23-2149152829.jpg?ga=GA1.1.94081497.1723952170&semt=ais_hybrid') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.overlay {
+    /* background: rgba(0, 0, 0, 0.242); */
+    padding: 20px;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  
+}
+
+
+
+
+.hero .highlight {
+    color: #7ebc4a; /* Adjust highlight color */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 30px;
+}
 .gallery {
     display: flex;
     flex-wrap: wrap;
